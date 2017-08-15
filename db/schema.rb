@@ -17,7 +17,7 @@ ActiveRecord::Schema.define(version: 20170810095244) do
     t.string   "email"
     t.string   "password_digest"
     t.string   "avator"
-    t.integer  "avtivity_id"
+    t.integer  "activity_id"
     t.datetime "created_at",      null: false
     t.datetime "updated_at",      null: false
   end

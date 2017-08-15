@@ -12,7 +12,13 @@ gem 'rails', '~> 5.0.5'
 # gem 'sqlite3'
 gem 'mysql2', '~> 0.4.8'
 gem 'pry-byebug', group: :development
-# Use Puma as the app server
+# password
+gem 'bcrypt',         '3.1.11'
+# register image
+gem 'carrierwave',             '1.1.0'
+gem 'mini_magick',             '4.7.0'
+gem 'fog',                     '1.40.0'
+
 gem 'puma', '~> 3.0'
 
 gem 'bootstrap-sass', '3.3.7'
