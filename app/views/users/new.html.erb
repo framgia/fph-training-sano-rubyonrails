@@ -1,23 +1,27 @@
-<h2>Sign up</h2>
+<h2 class="title">Sign up</h2>
 
-<%= form_for(@user, url: signup_path) do |f| %>
-    <%= render 'shared/error_messages', object: f.object %>
+<div class="row">
+    <div class="col-md-10 col-md-offset-4">
+        <%= form_for(@user, url: signup_path) do |f| %>
+            <%= render 'shared/error_messages', object: f.object %>
 
-    <%= f.label :name %>
-    <%= f.text_field :name, class: 'form-control name' %>
+            <%= f.label :name %>
+            <%= f.text_field :name, class: 'form-control name' %>
 
-    <%= f.label :email %>
-    <%= f.email_field :email, class: 'form-control email' %>
+            <%= f.label :email %>
+            <%= f.email_field :email, class: 'form-control email' %>
 
-    <%= f.label :password %>
-    <%= f.password_field :password, class: 'form-control password' %>
+            <%= f.label :password %>
+            <%= f.password_field :password, class: 'form-control password' %>
 
-    <%= f.label :password_confirmation, "Confirmation" %>
-    <%= f.password_field :password_confirmation, class: 'form-control password' %>
+            <%= f.label :password_confirmation, "Confirmation" %>
+            <%= f.password_field :password_confirmation, class: 'form-control password' %>
 
-    <%= f.label :avator %>
-    <%= f.file_field :avator %>
-    <br>
+            <%= f.label :avator %>
+            <%= f.file_field :avator %>
+            <br>
 
-    <%= f.submit "Create my account", class: "btn btn-primary" %>
-<% end %>
+            <%= f.submit "Create my account", class: "btn btn-primary" %>
+        <% end %>
+    </div>
+</div>
