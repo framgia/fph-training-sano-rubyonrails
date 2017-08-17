@@ -13,7 +13,7 @@
         <div class="collapse navbar-collapse" id="navbarEexample5">
             <ul class="nav navbar-nav">
                 <% if logged_in? %>
-                    <li><%= link_to 'Show', '#' %></li>
+                    <li><%= link_to 'Show', user_path(current_user) %></li>
                     <li><%= link_to 'Edit', '#' %></li>
                     <li><%= link_to 'All Users', '' %></li>
                     <li><%= link_to 'Logout', logout_path, method: :delete %></li>
