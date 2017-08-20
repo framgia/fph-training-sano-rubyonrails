@@ -1,4 +1,7 @@
 class User < ApplicationRecord
+    include Gravtastic
+    gravtastic
+    
     mount_uploader :avator, AvatorUploader
 
     validates :name, presence: true, length: { maximum: 50 }
