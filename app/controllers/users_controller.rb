@@ -2,6 +2,7 @@ class UsersController < ApplicationController
     before_action :logged_in_user, only: [:new]
 
     def index
+        @users = User.paginate(page: params[:page])
     end
 
     def show
@@ -16,7 +17,7 @@ class UsersController < ApplicationController
         @user = User.new(user_params)
         if @user.save
             log_in @user
-            flash[:success] = "Create Infomation Successfully"
+            flash[:success] = "Create Information Successfully"
             redirect_to root_url
         else
             render 'new'
